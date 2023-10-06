@@ -1,0 +1,49 @@
+<div class="row my-5">
+  <form [formGroup]="searchform" (ngSubmit)="sendUser()">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+          <fa-icon [icon]="faUser "></fa-icon>
+        </span>
+      </div>
+      <input type="text" class="form-control" formControlName="username" placeholder="Username" aria-label="Username" >
+      <div class="input-group-append">
+        <button
+         class="btn btn-outline-secondary" type="submit" [disabled]="!this.searchform.valid">Enviar</button>
+      </div>
+    </div>
+
+    <!--<div class="form-group">
+      <input type="text" formControlName="username" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" [disabled]="!this.searchform.valid">Enviar</button>
+    </div>-->
+  </form>
+</div>
+
+<div class="row">
+  <div class="card">
+    <div class="card-body">
+      <div class="container">
+        <table
+          class="table table-responsive data-table"
+        >
+        <thead class="title-text">
+          <tr class="table-header">
+            <th class="table-column-header">ID</th>
+            <th class="table-column-header">Username</th>
+            <th class="table-column-header">URL</th>
+            <th class="table-column-header">Ver</th>
+          </tr>
+        </thead>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <canvas id="barChartFollowers" style="height: auto;"></canvas>
+</div>
